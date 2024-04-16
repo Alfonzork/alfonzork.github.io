@@ -31,7 +31,7 @@
         });
 
         document.querySelector('#rechazar').addEventListener('mouseover', moveButton);
-        document.querySelector('#rechazar').addEventListener('touchstart', moveButton);
+        document.querySelector('#rechazar').addEventListener('touchmove', moveButton);
 
         function moveButton(event) {
             var maxX = 800 - this.offsetWidth;
