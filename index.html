@@ -30,12 +30,15 @@
             alert('Sabia que ibas a aceptar!!');
         });
 
-        document.querySelector('#rechazar').addEventListener('mouseover', function (event) {
-            var maxX = 800- this.offsetWidth;
-            var maxY = 600- this.offsetHeight;
+        document.querySelector('#rechazar').addEventListener('mouseover', moveButton);
+        document.querySelector('#rechazar').addEventListener('touchstart', moveButton);
+
+        function moveButton(event) {
+            var maxX = 800 - this.offsetWidth;
+            var maxY = 500 - this.offsetHeight;
             this.style.left = Math.floor(Math.random() * maxX) + 'px';
             this.style.top = Math.floor(Math.random() * maxY) + 'px';
-        });
+        }
     </script>
 </body>
 </html>
