@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .center-screen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        #rechazar {
+            position: fixed;
+            transition: 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="center-screen">
+        <h1>Salir el Viernes</h1>
+        <button id="aceptar" class="btn btn-primary">Aceptar</button>
+        <button id="rechazar" class="btn btn-danger">Rechazar</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        document.querySelector('#aceptar').addEventListener('click', function (event) {
+            alert('Sabia que ibas a aceptar!!');
+        });
+
+        document.querySelector('#rechazar').addEventListener('mouseover', function (event) {
+            var maxX = 800- this.offsetWidth;
+            var maxY = 600- this.offsetHeight;
+            this.style.left = Math.floor(Math.random() * maxX) + 'px';
+            this.style.top = Math.floor(Math.random() * maxY) + 'px';
+        });
+    </script>
+</body>
+</html>
